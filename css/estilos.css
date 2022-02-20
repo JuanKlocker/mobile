@@ -1,0 +1,46 @@
+/* GENERAL */
+@font-face {
+  font-family: 'KeepCalm';
+  src: url(../ttf/KeepCalm-Medium.ttf); }
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'KeepCalm'; }
+
+.mainIndex {
+  background-color: #FAFAD2; }
+
+.imgIndex {
+  text-align: center;
+  height: 20%; }
+
+.menuIndex li {
+  list-style: none;
+  text-align: center;
+  border: solid;
+  margin: 10px 20px;
+  transition: all 300ms; }
+  .menuIndex li a {
+    text-decoration: none;
+    color: black;
+    size: 5px; }
+
+#gridAreas {
+  text-align: center;
+  background-color: #FAFAD2; }
+  #gridAreas header {
+    float: left; }
+  #gridAreas aside .menuInicio {
+    float: right;
+    padding: 0; }
+    #gridAreas aside .menuInicio .pMenu {
+      list-style: none;
+      border: solid black;
+      margin: 5px; }
+      #gridAreas aside .menuInicio .pMenu .sMenu {
+        text-decoration: none;
+        display: none;
+        position: absolute; }
+      #gridAreas aside .menuInicio .pMenu:hover > .sMenu {
+        display: block; }
