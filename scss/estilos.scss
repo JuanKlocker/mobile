@@ -1,5 +1,6 @@
 /* GENERAL */
 @import "colores";
+@import "tamanos";
 @font-face {
     font-family: 'KeepCalm';
     src: url(../ttf/KeepCalm-Medium.ttf);
@@ -73,10 +74,13 @@
     }
     main{
         grid-area: main;
-    
+        .imgContacto{
+            width: $anchoM;
+        }
         
     }
     footer{
+        margin: 0;
         display: inline-block;
         grid-area: footer;
         text-align: end;
@@ -87,4 +91,5 @@
             }
         }
     }
+
 }

@@ -53,7 +53,10 @@
           display: block; }
   #gridAreas main {
     grid-area: main; }
+    #gridAreas main .imgContacto {
+      width: 20rem; }
   #gridAreas footer {
+    margin: 0;
     display: inline-block;
     grid-area: footer;
     text-align: end; }
