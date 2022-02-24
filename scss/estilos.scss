@@ -1,4 +1,5 @@
 /* GENERAL */
+
 @import "colores";
 @import "tamanos";
 @font-face {
@@ -32,64 +33,358 @@
     }
 
 }
-#gridAreas{
-    display: grid;
-    grid-template-areas: 
-    "header menu"
-    "main main"
-    "footer footer";
-    grid-template-rows: 
-    1fr 6fr 1fr;
-    text-align: center;
-    background-color: $colorS;
-    header{
-        grid-area: header;
-        
+header{
+    margin: 0;
+    grid-area: header;
+    .imgHeader{
+        margin: 0;
+        width: 10rem;
     }
-    aside{
-        grid-area: menu ;
+    
+}
+nav{
+    margin: 0;
+    grid-area: menu;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
     .menuInicio{
-        padding: 0;
-    
-    
-        .pMenu{
+        margin-top: 0;
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
         list-style: none;
-        border: solid black;
         margin: 5px;
-            a{
-                color: black;
-                padding: 0;
-            }
-            .sMenu{
-            text-decoration: none;
-            display: none;
-            position: absolute;
+                a{
+                    color: black;
+                    padding: 0;
+                }
+                li{
+                    margin: 0.1rem;
+                    width: 4.4rem;
+                    border: solid;
+                    background-color: $colorP;
+                }
+                h5{
+                    font-weight: lighter;
+                    font-size: 0.7rem;
+                    padding: 0.5%;
+                }
                 
-            }
-            &:hover > .sMenu{
-            display: block;
-            }
         }
     }
-    }
+
+
+#gridAreas{
+    height: 0;
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "menu"
+    "main"
+    "footer";
+    grid-template-rows: 
+    2fr 1fr 6fr 1fr;
+    text-align: center;
+    background-color: $colorS;
+    
+
     main{
         grid-area: main;
+        .h2Inicio{
+            margin: 5px;
+            text-decoration: underline;
+        }
         .imgContacto{
             width: $anchoM;
         }
-        
+        .artContacto{
+            text-align: center;
+        }
+        .imgRecetas{
+            margin: 2rem;
+            width: $anchoM;
+        }
+        .pRecetas{
+            margin: 1rem;
+            border: solid;
+        }
+        .sectionCursos{
+            margin: 1rem;
+            border: solid;
+            .buttonCursos{
+                margin: 1rem 0.4rem;
+                height: 5rem;
+                width: 10rem;
+                background-color: gold;
+            }
+        }
     }
     footer{
-        margin: 0;
-        display: inline-block;
+        margin: 1rem;
+        display: flex;
+        flex-direction: row;
         grid-area: footer;
-        text-align: end;
+        justify-content: end;
         ol{
+            
+            display: flex;
+            flex-direction: row;
             list-style: none;
             a{
                 color: black;
             }
         }
     }
+}
+@media (min-width: 600px) and (max-width: 1199px){
+    @import "colores";
+    @import "tamanos";
+    @font-face {
+        font-family: 'KeepCalm';
+        src: url(../ttf/KeepCalm-Medium.ttf);
+    }
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: 'KeepCalm';
+    }
+    header{
+        height: 15%;
+        grid-area: header;
+        text-align: center;
+        
+    }
+    nav{
+        text-align: center;
+        display: flex;
+        grid-area: menu;
+        background-color: gold;
+        
+    }
+    .mainIndex{
+        height: 89vh;
+        background-color: #FAFAD2;
+        border-radius: 15%;
+        margin: 3%;
+        
+    .imgIndex{
+            height: 25%;
+            text-align: center;
+    }
+    .menuIndex{
+        li{
+            list-style: none;
+            text-align: center;
+            border: solid;
+            margin: 10px 20px;
+            transition: all 300ms;
+            a{
+                color: black;
+                size: 5px;
+            }
+        }
+    
+    }
+}
+       
+       
+        
+    
+    footer{
+        height: 10%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-content: flex-end;
+        grid-area: footer;
+        ol{
+            margin: 10px;
+            display: flex;
+            flex-direction: row;
+            li{
+                list-style: none;
+            
+            }
+        }
+    }
+    #gridAreas{
+        display: grid;
+        background-color:#FAFAD2 ;
+        grid-template-areas: 
+        "menu header"
+        "menu main"
+        "menu footer";
+        grid-template-columns: 
+        1fr 7fr;
+        .menuInicio{
+           display: flex;
+           flex-direction: column;
+           justify-content: space-around;
+           li{
+               color: black;
+            text-align: center;
+            list-style: none;
+            padding:  25px ;
+            list-style: none;
+            a{
+                color: black;
+            }
+            &:hover{
+                transition: 0s;
+                border: solid;
+            }
+            i{
+                font-size: 50px;
+            }
+            .h2Inicio{
+                color: black;
+                text-align: center;
+                padding: 10px;
+            }
+            
+        }
+        .artInicio{
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+            .pInicio{
+                margin: 2%;
+            }
+            
+        }
+        
 
+        }
+        
+}
+}   
+@media (min-width: 1200px){
+    body{
+        background-color: gold;
+    }
+    @import "colores";
+    @import "tamanos";
+    @font-face {
+        font-family: 'KeepCalm';
+        src: url(../ttf/KeepCalm-Medium.ttf);
+    }
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: 'KeepCalm';
+    }
+    header{
+        height: 15%;
+        grid-area: header;
+        text-align: center;
+        
+    }
+    nav{
+        text-align: center;
+        display: flex;
+        grid-area: menu;
+        background-color: gold;
+        
+    }
+    .mainIndex{
+        height: 89vh;
+        background-color: #FAFAD2;
+        border-radius: 15%;
+        margin: 3%;
+        
+    .imgIndex{
+            height: 10%;
+            text-align: center;
+    }
+    .menuIndex{
+        li{
+            list-style: none;
+            text-align: center;
+            border: solid;
+            margin: 10px 20px;
+            transition: all 300ms;
+            a{
+                color: black;
+                size: 5px;
+            }
+        }
+    
+    }
+    }
+    #gridAreas{
+        display: grid;
+        background-color:#FAFAD2 ;
+        grid-template-areas: 
+        "menu header"
+        "menu main"
+        "menu footer";
+        grid-template-columns: 
+        1fr 7fr;
+        .menuInicio{
+           display: flex;
+           flex-direction: column;
+           justify-content: space-around;
+           li{
+               color: black;
+            text-align: center;
+            list-style: none;
+            padding:  25px ;
+            list-style: none;
+            a{
+                color: black;
+            }
+            &:hover{
+                transition: 300s;
+                border: solid;
+            }
+            i{
+                font-size: 50px;
+            }
+            .h2Inicio{
+                color: black;
+                text-align: center;
+                padding: 10px;
+            }
+            
+        }
+        .artInicio{
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+            .pInicio{
+                margin: 2%;
+            }
+            
+        }
+        
+        
+
+        }
+        
+
+}
+       
+       
+        
+    
+    footer{
+        height: 10%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-content: flex-end;
+        grid-area: footer;
+        ol{
+            margin: 10px;
+            display: flex;
+            flex-direction: row;
+            li{
+                list-style: none;
+            
+            }
+        }
+    }
+    
 }

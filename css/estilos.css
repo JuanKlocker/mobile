@@ -26,41 +26,241 @@
     color: black;
     size: 5px; }
 
+header {
+  margin: 0;
+  grid-area: header; }
+  header .imgHeader {
+    margin: 0;
+    width: 10rem; }
+
+nav {
+  margin: 0;
+  grid-area: menu;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0; }
+  nav .menuInicio {
+    margin-top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    list-style: none;
+    margin: 5px; }
+    nav .menuInicio a {
+      color: black;
+      padding: 0; }
+    nav .menuInicio li {
+      margin: 0.1rem;
+      width: 4.4rem;
+      border: solid;
+      background-color: gold; }
+    nav .menuInicio h5 {
+      font-weight: lighter;
+      font-size: 0.7rem;
+      padding: 0.5%; }
+
 #gridAreas {
+  height: 0;
   display: grid;
-  grid-template-areas: "header menu" "main main" "footer footer";
-  grid-template-rows: 1fr 6fr 1fr;
+  grid-template-areas: "header" "menu" "main" "footer";
+  grid-template-rows: 2fr 1fr 6fr 1fr;
   text-align: center;
   background-color: #FAFAD2; }
-  #gridAreas header {
-    grid-area: header; }
-  #gridAreas aside {
-    grid-area: menu; }
-    #gridAreas aside .menuInicio {
-      padding: 0; }
-      #gridAreas aside .menuInicio .pMenu {
-        list-style: none;
-        border: solid black;
-        margin: 5px; }
-        #gridAreas aside .menuInicio .pMenu a {
-          color: black;
-          padding: 0; }
-        #gridAreas aside .menuInicio .pMenu .sMenu {
-          text-decoration: none;
-          display: none;
-          position: absolute; }
-        #gridAreas aside .menuInicio .pMenu:hover > .sMenu {
-          display: block; }
   #gridAreas main {
     grid-area: main; }
+    #gridAreas main .h2Inicio {
+      margin: 5px;
+      text-decoration: underline; }
     #gridAreas main .imgContacto {
       width: 20rem; }
+    #gridAreas main .artContacto {
+      text-align: center; }
+    #gridAreas main .imgRecetas {
+      margin: 2rem;
+      width: 20rem; }
+    #gridAreas main .pRecetas {
+      margin: 1rem;
+      border: solid; }
+    #gridAreas main .sectionCursos {
+      margin: 1rem;
+      border: solid; }
+      #gridAreas main .sectionCursos .buttonCursos {
+        margin: 1rem 0.4rem;
+        height: 5rem;
+        width: 10rem;
+        background-color: gold; }
   #gridAreas footer {
-    margin: 0;
-    display: inline-block;
+    margin: 1rem;
+    display: flex;
+    flex-direction: row;
     grid-area: footer;
-    text-align: end; }
+    justify-content: end; }
     #gridAreas footer ol {
+      display: flex;
+      flex-direction: row;
       list-style: none; }
       #gridAreas footer ol a {
         color: black; }
+
+@media (min-width: 600px) and (max-width: 1199px) {
+  @font-face {
+    font-family: 'KeepCalm';
+    src: url(../ttf/KeepCalm-Medium.ttf); }
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: 'KeepCalm'; }
+  header {
+    height: 15%;
+    grid-area: header;
+    text-align: center; }
+  nav {
+    text-align: center;
+    display: flex;
+    grid-area: menu;
+    background-color: gold; }
+  .mainIndex {
+    height: 89vh;
+    background-color: #FAFAD2;
+    border-radius: 15%;
+    margin: 3%; }
+    .mainIndex .imgIndex {
+      height: 25%;
+      text-align: center; }
+    .mainIndex .menuIndex li {
+      list-style: none;
+      text-align: center;
+      border: solid;
+      margin: 10px 20px;
+      transition: all 300ms; }
+      .mainIndex .menuIndex li a {
+        color: black;
+        size: 5px; }
+  footer {
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: flex-end;
+    grid-area: footer; }
+    footer ol {
+      margin: 10px;
+      display: flex;
+      flex-direction: row; }
+      footer ol li {
+        list-style: none; }
+  #gridAreas {
+    display: grid;
+    background-color: #FAFAD2;
+    grid-template-areas: "menu header" "menu main" "menu footer";
+    grid-template-columns: 1fr 7fr; }
+    #gridAreas .menuInicio {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around; }
+      #gridAreas .menuInicio li {
+        color: black;
+        text-align: center;
+        list-style: none;
+        padding: 25px;
+        list-style: none; }
+        #gridAreas .menuInicio li a {
+          color: black; }
+        #gridAreas .menuInicio li:hover {
+          transition: 0s;
+          border: solid; }
+        #gridAreas .menuInicio li i {
+          font-size: 50px; }
+        #gridAreas .menuInicio li .h2Inicio {
+          color: black;
+          text-align: center;
+          padding: 10px; }
+      #gridAreas .menuInicio .artInicio {
+        display: flex;
+        justify-content: center;
+        margin: 20px; }
+        #gridAreas .menuInicio .artInicio .pInicio {
+          margin: 2%; } }
+
+@media (min-width: 1200px) {
+  body {
+    background-color: gold; }
+  @font-face {
+    font-family: 'KeepCalm';
+    src: url(../ttf/KeepCalm-Medium.ttf); }
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: 'KeepCalm'; }
+  header {
+    height: 15%;
+    grid-area: header;
+    text-align: center; }
+  nav {
+    text-align: center;
+    display: flex;
+    grid-area: menu;
+    background-color: gold; }
+  .mainIndex {
+    height: 89vh;
+    background-color: #FAFAD2;
+    border-radius: 15%;
+    margin: 3%; }
+    .mainIndex .imgIndex {
+      height: 25%;
+      text-align: center; }
+    .mainIndex .menuIndex li {
+      list-style: none;
+      text-align: center;
+      border: solid;
+      margin: 10px 20px;
+      transition: all 300ms; }
+      .mainIndex .menuIndex li a {
+        color: black;
+        size: 5px; }
+  #gridAreas {
+    display: grid;
+    background-color: #FAFAD2;
+    grid-template-areas: "menu header" "menu main" "menu footer";
+    grid-template-columns: 1fr 7fr; }
+    #gridAreas .menuInicio {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around; }
+      #gridAreas .menuInicio li {
+        color: black;
+        text-align: center;
+        list-style: none;
+        padding: 25px;
+        list-style: none; }
+        #gridAreas .menuInicio li a {
+          color: black; }
+        #gridAreas .menuInicio li:hover {
+          transition: 300s;
+          border: solid; }
+        #gridAreas .menuInicio li i {
+          font-size: 50px; }
+        #gridAreas .menuInicio li .h2Inicio {
+          color: black;
+          text-align: center;
+          padding: 10px; }
+      #gridAreas .menuInicio .artInicio {
+        display: flex;
+        justify-content: center;
+        margin: 20px; }
+        #gridAreas .menuInicio .artInicio .pInicio {
+          margin: 2%; }
+  footer {
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: flex-end;
+    grid-area: footer; }
+    footer ol {
+      margin: 10px;
+      display: flex;
+      flex-direction: row; }
+      footer ol li {
+        list-style: none; } }
