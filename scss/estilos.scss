@@ -1,5 +1,5 @@
 /* GENERAL */
-
+@media (max-width: 599px){
 @import "colores";
 @import "tamanos";
 @font-face {
@@ -16,7 +16,7 @@
 }
 .imgIndex{
     text-align: center;
-    height: 20%;
+    width: 15%;
 }
 .menuIndex{
     li{
@@ -24,7 +24,6 @@
         text-align: center;
         border: solid;
         margin: 10px 20px;
-        transition: all 300ms;
         a{
             text-decoration:  none;
             color: black;
@@ -117,7 +116,7 @@ nav{
                 margin: 1rem 0.4rem;
                 height: 5rem;
                 width: 10rem;
-                background-color: gold;
+                background-color: $colorP;
             }
         }
     }
@@ -133,10 +132,11 @@ nav{
             flex-direction: row;
             list-style: none;
             a{
-                color: black;
+                color: $colorT;
             }
         }
     }
+}
 }
 @media (min-width: 600px) and (max-width: 1199px){
     @import "colores";
@@ -160,18 +160,19 @@ nav{
         text-align: center;
         display: flex;
         grid-area: menu;
-        background-color: gold;
+        background-color: $colorP;
         
     }
     .mainIndex{
         height: 89vh;
-        background-color: #FAFAD2;
+        background-color: $colorS;
         border-radius: 15%;
         margin: 3%;
         
     .imgIndex{
-            height: 25%;
-            text-align: center;
+        width: 20%;
+            margin: 1%;
+            text-align: center !important;
     }
     .menuIndex{
         li{
@@ -261,19 +262,20 @@ nav{
 }
 }   
 @media (min-width: 1200px){
-    body{
-        background-color: gold;
-    }
     @import "colores";
     @import "tamanos";
-    @font-face {
-        font-family: 'KeepCalm';
-        src: url(../ttf/KeepCalm-Medium.ttf);
-    }
-    *{
-        margin: 0;
-        padding: 0;
-        font-family: 'KeepCalm';
+@font-face {
+    font-family: 'KeepCalm';
+    src: url(../ttf/KeepCalm-Medium.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'KeepCalm';
+}
+    body{
+        background-color: gold;
+        height: 100vh;
     }
     header{
         height: 15%;
@@ -284,87 +286,201 @@ nav{
     nav{
         text-align: center;
         display: flex;
+        height: 100%;
         grid-area: menu;
         background-color: gold;
-        
     }
-    .mainIndex{
-        height: 89vh;
-        background-color: #FAFAD2;
-        border-radius: 15%;
-        margin: 3%;
-        
-    .imgIndex{
-            height: 10%;
-            text-align: center;
+    main{
+        top: 0;
     }
-    .menuIndex{
-        li{
+    
+    footer{
+        height: 10%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-content: flex-end;
+        grid-area: footer;
+        ol{
+        margin: 10px;
+        display: flex;
+        flex-direction: row;
+            li{
             list-style: none;
-            text-align: center;
-            border: solid;
-            margin: 10px 20px;
-            transition: all 300ms;
-            a{
-                color: black;
-                size: 5px;
-            }
-        }
     
     }
     }
+    }
+    /* ICONOS */
+    .bi-house-fill{
+        color: black;
+    font-size: $tamI
+    }
+    .bi-people-fill{
+        color: black;
+        font-size: $tamI
+    }
+    .bi-cart-fill{
+        color: black;
+        font-size: $tamI
+    }
+    .bi-shop-window{
+        color: black;
+        font-size: $tamI
+    }
+    .bi-egg-fried{
+        color: black;
+        font-size: $tamI
+    }
+    .bi-mortarboard-fill{
+        color: black;
+        font-size: $tamI
+    }
+    .bi-facebook{
+        color: black;
+        font-size: 25px;
+    }
+    .bi-instagram{
+        color: black;
+        font-size: 25px;
+    }
+    
+    /* INDEX */
+    .mainIndex{
+    height: 88%;
+    background-color: $colorS;
+    border-radius: 15%;
+    margin: 3%;
+    }
+    .imgIndex{
+        width: 17%;
+    }
+    .menuIndex{
+        margin: 4rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly ;
+        height: 70%;
+    
+         li{
+        width: 8rem;
+        align-content: center;
+        border: solid;
+        padding: 1rem;
+        list-style: none;
+        text-align: center;
+        transition: all 300ms;
+            &:hover{
+        background-color: $colorP;
+            }
+            h4{
+        text-decoration: none;
+         color: $colorT;
+        }
+            a{
+        text-decoration: none $colorT;  
+        
+    }
+}   
+}
+    
     #gridAreas{
         display: grid;
-        background-color:#FAFAD2 ;
+        background-color: $colorS ;
         grid-template-areas: 
         "menu header"
         "menu main"
         "menu footer";
         grid-template-columns: 
         1fr 7fr;
+        .imgHeader{
+            width: 20%;
+        }
         .menuInicio{
+            margin-left: 1.95rem;
            display: flex;
            flex-direction: column;
            justify-content: space-around;
            li{
-               color: black;
+            color: black;
             text-align: center;
             list-style: none;
-            padding:  25px ;
-            list-style: none;
-            a{
-                color: black;
-            }
+            padding:  1rem ;
             &:hover{
-                transition: 300s;
                 border: solid;
+                border-width: 0.1rem;
             }
-            i{
-                font-size: 50px;
-            }
-            .h2Inicio{
-                color: black;
-                text-align: center;
-                padding: 10px;
+            a{
+                text-decoration: none;
+                color: $colorT;
             }
             
+    
+            
         }
+    }
         .artInicio{
             display: flex;
-            justify-content: center;
+            justify-content: justify;
             margin: 20px;
             .pInicio{
                 margin: 2%;
             }
             
         }
-        
-        
-
+        .imgContacto{
+            width: 22.5rem;
+        }
+        .artContacto{
+            margin: 2%;
         }
         
+        .contenedorReceta{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            height: 30rem;
+            div{
+                width: 20rem;
+                margin: 4.85rem;
+                img{
+                    width: 100%;
+                    
+                }
+                p{
+                    text-align: center;
+                    color: black;
+                    position: absolute;
+                    top: 55%;
+                    left: 31.5%;
+                    border: solid;
+                    width: 3rem;
+                    padding: 1rem;
+                    opacity: 0;
+                }
+                &:hover{
+                    filter: blur(5px);
+                    
+                }
+            }
+        }        
+        .sectionCursos{
+            display: flex;
+            justify-content: space-around;
+            width: 70rem;
+            height: 20rem;
+            margin: 4.3rem;
+            border: solid;
+            .buttonCursos{
+                height: 17rem;
+                width: 12rem;
+                margin: 1.4rem;
+            }
+        }
+        
+        
+    }
 
-}
        
        
         

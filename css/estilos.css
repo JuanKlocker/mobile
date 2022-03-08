@@ -1,107 +1,100 @@
 /* GENERAL */
-@font-face {
-  font-family: 'KeepCalm';
-  src: url(../ttf/KeepCalm-Medium.ttf); }
-
-* {
-  margin: 0;
-  padding: 0;
-  font-family: 'KeepCalm'; }
-
-.mainIndex {
-  background-color: #FAFAD2; }
-
-.imgIndex {
-  text-align: center;
-  height: 20%; }
-
-.menuIndex li {
-  list-style: none;
-  text-align: center;
-  border: solid;
-  margin: 10px 20px;
-  transition: all 300ms; }
-  .menuIndex li a {
-    text-decoration: none;
-    color: black;
-    size: 5px; }
-
-header {
-  margin: 0;
-  grid-area: header; }
-  header .imgHeader {
+@media (max-width: 599px) {
+  @font-face {
+    font-family: 'KeepCalm';
+    src: url(../ttf/KeepCalm-Medium.ttf); }
+  * {
     margin: 0;
-    width: 10rem; }
-
-nav {
-  margin: 0;
-  grid-area: menu;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding: 0; }
-  nav .menuInicio {
-    margin-top: 0;
-    display: flex;
-    flex-direction: row;
-    justify-items: center;
+    padding: 0;
+    font-family: 'KeepCalm'; }
+  .mainIndex {
+    background-color: #FAFAD2; }
+  .imgIndex {
+    text-align: center;
+    width: 15%; }
+  .menuIndex li {
     list-style: none;
-    margin: 5px; }
-    nav .menuInicio a {
+    text-align: center;
+    border: solid;
+    margin: 10px 20px; }
+    .menuIndex li a {
+      text-decoration: none;
       color: black;
-      padding: 0; }
-    nav .menuInicio li {
-      margin: 0.1rem;
-      width: 4.4rem;
-      border: solid;
-      background-color: gold; }
-    nav .menuInicio h5 {
-      font-weight: lighter;
-      font-size: 0.7rem;
-      padding: 0.5%; }
-
-#gridAreas {
-  height: 0;
-  display: grid;
-  grid-template-areas: "header" "menu" "main" "footer";
-  grid-template-rows: 2fr 1fr 6fr 1fr;
-  text-align: center;
-  background-color: #FAFAD2; }
-  #gridAreas main {
-    grid-area: main; }
-    #gridAreas main .h2Inicio {
-      margin: 5px;
-      text-decoration: underline; }
-    #gridAreas main .imgContacto {
-      width: 20rem; }
-    #gridAreas main .artContacto {
-      text-align: center; }
-    #gridAreas main .imgRecetas {
-      margin: 2rem;
-      width: 20rem; }
-    #gridAreas main .pRecetas {
-      margin: 1rem;
-      border: solid; }
-    #gridAreas main .sectionCursos {
-      margin: 1rem;
-      border: solid; }
-      #gridAreas main .sectionCursos .buttonCursos {
-        margin: 1rem 0.4rem;
-        height: 5rem;
-        width: 10rem;
-        background-color: gold; }
-  #gridAreas footer {
-    margin: 1rem;
+      size: 5px; }
+  header {
+    margin: 0;
+    grid-area: header; }
+    header .imgHeader {
+      margin: 0;
+      width: 10rem; }
+  nav {
+    margin: 0;
+    grid-area: menu;
     display: flex;
     flex-direction: row;
-    grid-area: footer;
-    justify-content: end; }
-    #gridAreas footer ol {
+    justify-content: center;
+    padding: 0; }
+    nav .menuInicio {
+      margin-top: 0;
       display: flex;
       flex-direction: row;
-      list-style: none; }
-      #gridAreas footer ol a {
-        color: black; }
+      justify-items: center;
+      list-style: none;
+      margin: 5px; }
+      nav .menuInicio a {
+        color: black;
+        padding: 0; }
+      nav .menuInicio li {
+        margin: 0.1rem;
+        width: 4.4rem;
+        border: solid;
+        background-color: gold; }
+      nav .menuInicio h5 {
+        font-weight: lighter;
+        font-size: 0.7rem;
+        padding: 0.5%; }
+  #gridAreas {
+    height: 0;
+    display: grid;
+    grid-template-areas: "header" "menu" "main" "footer";
+    grid-template-rows: 2fr 1fr 6fr 1fr;
+    text-align: center;
+    background-color: #FAFAD2; }
+    #gridAreas main {
+      grid-area: main; }
+      #gridAreas main .h2Inicio {
+        margin: 5px;
+        text-decoration: underline; }
+      #gridAreas main .imgContacto {
+        width: 20rem; }
+      #gridAreas main .artContacto {
+        text-align: center; }
+      #gridAreas main .imgRecetas {
+        margin: 2rem;
+        width: 20rem; }
+      #gridAreas main .pRecetas {
+        margin: 1rem;
+        border: solid; }
+      #gridAreas main .sectionCursos {
+        margin: 1rem;
+        border: solid; }
+        #gridAreas main .sectionCursos .buttonCursos {
+          margin: 1rem 0.4rem;
+          height: 5rem;
+          width: 10rem;
+          background-color: gold; }
+    #gridAreas footer {
+      margin: 1rem;
+      display: flex;
+      flex-direction: row;
+      grid-area: footer;
+      justify-content: end; }
+      #gridAreas footer ol {
+        display: flex;
+        flex-direction: row;
+        list-style: none; }
+        #gridAreas footer ol a {
+          color: black; } }
 
 @media (min-width: 600px) and (max-width: 1199px) {
   @font-face {
@@ -126,8 +119,9 @@ nav {
     border-radius: 15%;
     margin: 3%; }
     .mainIndex .imgIndex {
-      height: 25%;
-      text-align: center; }
+      width: 20%;
+      margin: 1%;
+      text-align: center !important; }
     .mainIndex .menuIndex li {
       list-style: none;
       text-align: center;
@@ -184,8 +178,6 @@ nav {
           margin: 2%; } }
 
 @media (min-width: 1200px) {
-  body {
-    background-color: gold; }
   @font-face {
     font-family: 'KeepCalm';
     src: url(../ttf/KeepCalm-Medium.ttf); }
@@ -193,6 +185,9 @@ nav {
     margin: 0;
     padding: 0;
     font-family: 'KeepCalm'; }
+  body {
+    background-color: gold;
+    height: 100vh; }
   header {
     height: 15%;
     grid-area: header;
@@ -200,31 +195,87 @@ nav {
   nav {
     text-align: center;
     display: flex;
+    height: 100%;
     grid-area: menu;
     background-color: gold; }
+  main {
+    top: 0; }
+  footer {
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: flex-end;
+    grid-area: footer; }
+    footer ol {
+      margin: 10px;
+      display: flex;
+      flex-direction: row; }
+      footer ol li {
+        list-style: none; }
+  /* ICONOS */
+  .bi-house-fill {
+    color: black;
+    font-size: 3.1rem; }
+  .bi-people-fill {
+    color: black;
+    font-size: 3.1rem; }
+  .bi-cart-fill {
+    color: black;
+    font-size: 3.1rem; }
+  .bi-shop-window {
+    color: black;
+    font-size: 3.1rem; }
+  .bi-egg-fried {
+    color: black;
+    font-size: 3.1rem; }
+  .bi-mortarboard-fill {
+    color: black;
+    font-size: 3.1rem; }
+  .bi-facebook {
+    color: black;
+    font-size: 25px; }
+  .bi-instagram {
+    color: black;
+    font-size: 25px; }
+  /* INDEX */
   .mainIndex {
-    height: 89vh;
+    height: 88%;
     background-color: #FAFAD2;
     border-radius: 15%;
     margin: 3%; }
-    .mainIndex .imgIndex {
-      height: 25%;
-      text-align: center; }
-    .mainIndex .menuIndex li {
+  .imgIndex {
+    width: 17%; }
+  .menuIndex {
+    margin: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 70%; }
+    .menuIndex li {
+      width: 8rem;
+      align-content: center;
+      border: solid;
+      padding: 1rem;
       list-style: none;
       text-align: center;
-      border: solid;
-      margin: 10px 20px;
       transition: all 300ms; }
-      .mainIndex .menuIndex li a {
-        color: black;
-        size: 5px; }
+      .menuIndex li:hover {
+        background-color: gold; }
+      .menuIndex li h4 {
+        text-decoration: none;
+        color: black; }
+      .menuIndex li a {
+        text-decoration: none black; }
   #gridAreas {
     display: grid;
     background-color: #FAFAD2;
     grid-template-areas: "menu header" "menu main" "menu footer";
     grid-template-columns: 1fr 7fr; }
+    #gridAreas .imgHeader {
+      width: 20%; }
     #gridAreas .menuInicio {
+      margin-left: 1.95rem;
       display: flex;
       flex-direction: column;
       justify-content: space-around; }
@@ -232,25 +283,56 @@ nav {
         color: black;
         text-align: center;
         list-style: none;
-        padding: 25px;
-        list-style: none; }
-        #gridAreas .menuInicio li a {
-          color: black; }
+        padding: 1rem; }
         #gridAreas .menuInicio li:hover {
-          transition: 300s;
-          border: solid; }
-        #gridAreas .menuInicio li i {
-          font-size: 50px; }
-        #gridAreas .menuInicio li .h2Inicio {
-          color: black;
+          border: solid;
+          border-width: 0.1rem; }
+        #gridAreas .menuInicio li a {
+          text-decoration: none;
+          color: black; }
+    #gridAreas .artInicio {
+      display: flex;
+      justify-content: justify;
+      margin: 20px; }
+      #gridAreas .artInicio .pInicio {
+        margin: 2%; }
+    #gridAreas .imgContacto {
+      width: 22.5rem; }
+    #gridAreas .artContacto {
+      margin: 2%; }
+    #gridAreas .contenedorReceta {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      height: 30rem; }
+      #gridAreas .contenedorReceta div {
+        width: 20rem;
+        margin: 4.85rem; }
+        #gridAreas .contenedorReceta div img {
+          width: 100%; }
+        #gridAreas .contenedorReceta div p {
           text-align: center;
-          padding: 10px; }
-      #gridAreas .menuInicio .artInicio {
-        display: flex;
-        justify-content: center;
-        margin: 20px; }
-        #gridAreas .menuInicio .artInicio .pInicio {
-          margin: 2%; }
+          color: black;
+          position: absolute;
+          top: 55%;
+          left: 31.5%;
+          border: solid;
+          width: 3rem;
+          padding: 1rem;
+          opacity: 0; }
+        #gridAreas .contenedorReceta div:hover {
+          filter: blur(5px); }
+    #gridAreas .sectionCursos {
+      display: flex;
+      justify-content: space-around;
+      width: 70rem;
+      height: 20rem;
+      margin: 4.3rem;
+      border: solid; }
+      #gridAreas .sectionCursos .buttonCursos {
+        height: 17rem;
+        width: 12rem;
+        margin: 1.4rem; }
   footer {
     height: 10%;
     display: flex;
