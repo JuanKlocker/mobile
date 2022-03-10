@@ -101,13 +101,58 @@ nav{
         .artContacto{
             text-align: center;
         }
-        .imgRecetas{
+        .contenedorReceta{
+            margin: 6rem 0;
+            height: 16.3rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            
+        div{
+            width: 12rem;
             margin: 2rem;
-            width: $anchoM;
-        }
-        .pRecetas{
-            margin: 1rem;
             border: solid;
+            background-image: url(../img/GheeReceta1.webp);
+            background-size: contain;  
+            a{
+                opacity: 0;
+                text-align: center;
+                text-decoration: none;
+                
+            p{
+                padding: 9.15rem 0rem;
+                font-size: 1.4rem;
+                color: black;
+                background-color:gold;
+                opacity: 0;
+                transition: 0.3s;
+                
+            }
+        
+            }
+    }
+    article{
+        width: 12rem;
+        margin: 2rem;
+        border: solid;
+        background-image: url(../img/GheeReceta2.jpg);
+        background-size: contain;
+        a{
+            text-align: center;
+            text-decoration: none;
+            
+            p{
+                padding: 9.15rem 0rem;
+                font-size: 1.4rem;
+                color: black;
+                background-color:gold;
+                opacity: 0;
+                transition: 0.3s;
+                
+            }
+        
+            }
+}
         }
         .sectionCursos{
             margin: 1rem;
@@ -150,13 +195,25 @@ nav{
         padding: 0;
         font-family: 'KeepCalm';
     }
+    .bi-facebook{
+        color: black;
+        font-size: $tamRT;
+    }
+    .bi-instagram{
+        color: black;
+        font-size: $tamRT;
+    }
     header{
         height: 15%;
         grid-area: header;
         text-align: center;
+        img{
+            width: 15rem;
+        }
         
     }
     nav{
+        width: 6rem;
         text-align: center;
         display: flex;
         grid-area: menu;
@@ -227,40 +284,122 @@ nav{
                color: black;
             text-align: center;
             list-style: none;
-            padding:  25px ;
-            list-style: none;
+            margin-left: 0.4rem;
             a{
+                text-decoration: none;
                 color: black;
             }
-            &:hover{
-                transition: 0s;
-                border: solid;
-            }
             i{
-                font-size: 50px;
+                font-size: 2rem;
             }
             .h2Inicio{
                 color: black;
                 text-align: center;
-                padding: 10px;
             }
             
         }
+    }
         .artInicio{
+            height: 27.5rem;
             display: flex;
-            justify-content: center;
-            margin: 20px;
+            justify-content: justify;
+            margin: 2rem;
             .pInicio{
                 margin: 2%;
+            }   
+        }
+        .imgContacto{
+            width: 22.5rem;
+        }
+        .artContacto{
+            margin: 1rem;
+        }
+        .contenedorReceta{
+            margin: 2.5rem 0;
+            height: 26rem;
+            display: flex;
+            flex-direction: row;
+        div{
+            width: 16rem;
+            margin: 4.85rem;
+            border: solid;
+            background-image: url(../img/GheeReceta1.webp);
+            background-size: contain;  
+            a{
+                opacity: 0;
+                text-align: center;
+                text-decoration: none;
+                
+            p{
+                padding: 9.15rem 0rem;
+                font-size: 1.4rem;
+                color: black;
+                background-color:gold;
+                opacity: 0;
+                transition: 0.3s;
+                
             }
-            
-        }
         
-
+            }
+    }
+    article{
+        width: 16rem;
+        margin: 4.85rem;
+        border: solid;
+        background-image: url(../img/GheeReceta2.jpg);
+        background-size: contain;
+        a{
+            text-align: center;
+            text-decoration: none;
+            
+            p{
+                padding: 9.15rem 0rem;
+                font-size: 1.4rem;
+                color: black;
+                background-color:gold;
+                opacity: 0;
+                transition: 0.3s;
+                
+            }
+        
+            }
+}
         }
+        .sectionCursos{
+            height: 30rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            .buttonCursos{
+                margin: 7rem 0;
+                height: 15rem;
+                width: 8rem;
+            }
+        }
+
         
 }
-}   
+footer{
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    p{
+        float: left;
+    }
+    ol{
+        margin: 10px;
+        display: flex;
+        flex-direction: row;
+        li{
+            list-style: none;
+            a{
+                margin: 0.5rem
+            }
+        }
+    }
+}
+}
 @media (min-width: 1200px){
     @import "colores";
     @import "tamanos";
@@ -314,27 +453,27 @@ nav{
     /* ICONOS */
     .bi-house-fill{
         color: black;
-    font-size: $tamI
+    font-size: $tamIW
     }
     .bi-people-fill{
         color: black;
-        font-size: $tamI
+        font-size: $tamIW
     }
     .bi-cart-fill{
         color: black;
-        font-size: $tamI
+        font-size: $tamIW
     }
     .bi-shop-window{
         color: black;
-        font-size: $tamI
+        font-size: $tamIW
     }
     .bi-egg-fried{
         color: black;
-        font-size: $tamI
+        font-size: $tamIW
     }
     .bi-mortarboard-fill{
         color: black;
-        font-size: $tamI
+        font-size: $tamIW
     }
     .bi-facebook{
         color: black;
@@ -381,8 +520,8 @@ nav{
         text-decoration: none $colorT;  
         
     }
-}   
-}
+    }   
+    }
     
     #gridAreas{
         display: grid;
@@ -420,6 +559,7 @@ nav{
         }
     }
         .artInicio{
+            height: 28rem;
             display: flex;
             justify-content: justify;
             margin: 20px;
@@ -443,36 +583,65 @@ nav{
             div{
                 width: 20rem;
                 margin: 4.85rem;
-                img{
-                    width: 100%;
-                    
-                }
-                p{
+                border: solid;
+                background-image: url(../img/GheeReceta1.webp);
+                background-size: contain;  
+                a{
                     text-align: center;
-                    color: black;
-                    position: absolute;
-                    top: 55%;
-                    left: 31.5%;
-                    border: solid;
-                    width: 3rem;
-                    padding: 1rem;
-                    opacity: 0;
-                }
-                &:hover{
-                    filter: blur(5px);
+                    text-decoration: none;
                     
+                p{
+                    padding: 9.15rem 0rem;
+                    font-size: 1.4rem;
+                    color: black;
+                    background-color:gold;
+                    opacity: 0;
+                    transition: 0.3s;
+                    
+                }
+            
+                }
+            &:hover p{
+                opacity: 0.8
                 }
             }
+        
+            article{
+                width: 20rem;
+                margin: 4.85rem;
+                border: solid;
+                background-image: url(../img/GheeReceta2.jpg);
+                background-size: contain;
+                a{
+                    text-align: center;
+                    text-decoration: none;
+                    
+                    p{
+                        padding: 9.15rem 0rem;
+                        font-size: 1.4rem;
+                        color: black;
+                        background-color:gold;
+                        opacity: 0;
+                        transition: 0.3s;
+                        
+                    }
+                
+                    }
+                &:hover p{
+                    opacity: 0.8
+                    }
+            }
+           
         }        
         .sectionCursos{
             display: flex;
             justify-content: space-around;
             width: 70rem;
-            height: 20rem;
+            height: 21rem;
             margin: 4.3rem;
             border: solid;
             .buttonCursos{
-                height: 17rem;
+                height: 18rem;
                 width: 12rem;
                 margin: 1.4rem;
             }
@@ -481,26 +650,27 @@ nav{
         
     }
 
-       
-       
+
         
     
     footer{
         height: 10%;
         display: flex;
         flex-direction: row;
-        justify-content: flex-end;
-        align-content: flex-end;
-        grid-area: footer;
+        align-items: center;
+        p{
+            float: left;
+        }
         ol{
             margin: 10px;
             display: flex;
             flex-direction: row;
             li{
                 list-style: none;
-            
+                a{
+                    margin: 0.5rem
+                }
             }
         }
     }
-    
 }

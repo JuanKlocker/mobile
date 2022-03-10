@@ -69,12 +69,45 @@
         width: 20rem; }
       #gridAreas main .artContacto {
         text-align: center; }
-      #gridAreas main .imgRecetas {
-        margin: 2rem;
-        width: 20rem; }
-      #gridAreas main .pRecetas {
-        margin: 1rem;
-        border: solid; }
+      #gridAreas main .contenedorReceta {
+        margin: 6rem 0;
+        height: 16.3rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around; }
+        #gridAreas main .contenedorReceta div {
+          width: 12rem;
+          margin: 2rem;
+          border: solid;
+          background-image: url(../img/GheeReceta1.webp);
+          background-size: contain; }
+          #gridAreas main .contenedorReceta div a {
+            opacity: 0;
+            text-align: center;
+            text-decoration: none; }
+            #gridAreas main .contenedorReceta div a p {
+              padding: 9.15rem 0rem;
+              font-size: 1.4rem;
+              color: black;
+              background-color: gold;
+              opacity: 0;
+              transition: 0.3s; }
+        #gridAreas main .contenedorReceta article {
+          width: 12rem;
+          margin: 2rem;
+          border: solid;
+          background-image: url(../img/GheeReceta2.jpg);
+          background-size: contain; }
+          #gridAreas main .contenedorReceta article a {
+            text-align: center;
+            text-decoration: none; }
+            #gridAreas main .contenedorReceta article a p {
+              padding: 9.15rem 0rem;
+              font-size: 1.4rem;
+              color: black;
+              background-color: gold;
+              opacity: 0;
+              transition: 0.3s; }
       #gridAreas main .sectionCursos {
         margin: 1rem;
         border: solid; }
@@ -104,11 +137,20 @@
     margin: 0;
     padding: 0;
     font-family: 'KeepCalm'; }
+  .bi-facebook {
+    color: black;
+    font-size: 1.3rem; }
+  .bi-instagram {
+    color: black;
+    font-size: 1.3rem; }
   header {
     height: 15%;
     grid-area: header;
     text-align: center; }
+    header img {
+      width: 15rem; }
   nav {
+    width: 6rem;
     text-align: center;
     display: flex;
     grid-area: menu;
@@ -157,25 +199,88 @@
         color: black;
         text-align: center;
         list-style: none;
-        padding: 25px;
-        list-style: none; }
+        margin-left: 0.4rem; }
         #gridAreas .menuInicio li a {
+          text-decoration: none;
           color: black; }
-        #gridAreas .menuInicio li:hover {
-          transition: 0s;
-          border: solid; }
         #gridAreas .menuInicio li i {
-          font-size: 50px; }
+          font-size: 2rem; }
         #gridAreas .menuInicio li .h2Inicio {
           color: black;
+          text-align: center; }
+    #gridAreas .artInicio {
+      height: 27.5rem;
+      display: flex;
+      justify-content: justify;
+      margin: 2rem; }
+      #gridAreas .artInicio .pInicio {
+        margin: 2%; }
+    #gridAreas .imgContacto {
+      width: 22.5rem; }
+    #gridAreas .artContacto {
+      margin: 1rem; }
+    #gridAreas .contenedorReceta {
+      margin: 2.5rem 0;
+      height: 26rem;
+      display: flex;
+      flex-direction: row; }
+      #gridAreas .contenedorReceta div {
+        width: 16rem;
+        margin: 4.85rem;
+        border: solid;
+        background-image: url(../img/GheeReceta1.webp);
+        background-size: contain; }
+        #gridAreas .contenedorReceta div a {
+          opacity: 0;
           text-align: center;
-          padding: 10px; }
-      #gridAreas .menuInicio .artInicio {
-        display: flex;
-        justify-content: center;
-        margin: 20px; }
-        #gridAreas .menuInicio .artInicio .pInicio {
-          margin: 2%; } }
+          text-decoration: none; }
+          #gridAreas .contenedorReceta div a p {
+            padding: 9.15rem 0rem;
+            font-size: 1.4rem;
+            color: black;
+            background-color: gold;
+            opacity: 0;
+            transition: 0.3s; }
+      #gridAreas .contenedorReceta article {
+        width: 16rem;
+        margin: 4.85rem;
+        border: solid;
+        background-image: url(../img/GheeReceta2.jpg);
+        background-size: contain; }
+        #gridAreas .contenedorReceta article a {
+          text-align: center;
+          text-decoration: none; }
+          #gridAreas .contenedorReceta article a p {
+            padding: 9.15rem 0rem;
+            font-size: 1.4rem;
+            color: black;
+            background-color: gold;
+            opacity: 0;
+            transition: 0.3s; }
+    #gridAreas .sectionCursos {
+      height: 30rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around; }
+      #gridAreas .sectionCursos .buttonCursos {
+        margin: 7rem 0;
+        height: 15rem;
+        width: 8rem; }
+  footer {
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center; }
+    footer p {
+      float: left; }
+    footer ol {
+      margin: 10px;
+      display: flex;
+      flex-direction: row; }
+      footer ol li {
+        list-style: none; }
+        footer ol li a {
+          margin: 0.5rem; } }
 
 @media (min-width: 1200px) {
   @font-face {
@@ -291,6 +396,7 @@
           text-decoration: none;
           color: black; }
     #gridAreas .artInicio {
+      height: 28rem;
       display: flex;
       justify-content: justify;
       margin: 20px; }
@@ -307,42 +413,63 @@
       height: 30rem; }
       #gridAreas .contenedorReceta div {
         width: 20rem;
-        margin: 4.85rem; }
-        #gridAreas .contenedorReceta div img {
-          width: 100%; }
-        #gridAreas .contenedorReceta div p {
+        margin: 4.85rem;
+        border: solid;
+        background-image: url(../img/GheeReceta1.webp);
+        background-size: contain; }
+        #gridAreas .contenedorReceta div a {
           text-align: center;
-          color: black;
-          position: absolute;
-          top: 55%;
-          left: 31.5%;
-          border: solid;
-          width: 3rem;
-          padding: 1rem;
-          opacity: 0; }
-        #gridAreas .contenedorReceta div:hover {
-          filter: blur(5px); }
+          text-decoration: none; }
+          #gridAreas .contenedorReceta div a p {
+            padding: 9.15rem 0rem;
+            font-size: 1.4rem;
+            color: black;
+            background-color: gold;
+            opacity: 0;
+            transition: 0.3s; }
+        #gridAreas .contenedorReceta div:hover p {
+          opacity: 0.8; }
+      #gridAreas .contenedorReceta article {
+        width: 20rem;
+        margin: 4.85rem;
+        border: solid;
+        background-image: url(../img/GheeReceta2.jpg);
+        background-size: contain; }
+        #gridAreas .contenedorReceta article a {
+          text-align: center;
+          text-decoration: none; }
+          #gridAreas .contenedorReceta article a p {
+            padding: 9.15rem 0rem;
+            font-size: 1.4rem;
+            color: black;
+            background-color: gold;
+            opacity: 0;
+            transition: 0.3s; }
+        #gridAreas .contenedorReceta article:hover p {
+          opacity: 0.8; }
     #gridAreas .sectionCursos {
       display: flex;
       justify-content: space-around;
       width: 70rem;
-      height: 20rem;
+      height: 21rem;
       margin: 4.3rem;
       border: solid; }
       #gridAreas .sectionCursos .buttonCursos {
-        height: 17rem;
+        height: 18rem;
         width: 12rem;
         margin: 1.4rem; }
   footer {
     height: 10%;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
-    align-content: flex-end;
-    grid-area: footer; }
+    align-items: center; }
+    footer p {
+      float: left; }
     footer ol {
       margin: 10px;
       display: flex;
       flex-direction: row; }
       footer ol li {
-        list-style: none; } }
+        list-style: none; }
+        footer ol li a {
+          margin: 0.5rem; } }
